@@ -1,6 +1,6 @@
-# NgrxShoppingList
+# Ngrx-Shopping-List
 
-## Simple shopping list component build using @ngrx/store, @ngrx/effects and dummy json-server used as API(s)
+## Simple shopping list build using angular, @ngrx/store, @ngrx/effects and dummy json-server used as API(s)
 
 ## To run
 
