@@ -8,6 +8,7 @@ import { v4 as uuid } from 'uuid';
 import { ShoppingItem } from './store/models/shopping-item.model';
 import { AppState } from './store/models/app-state.model';
 import { AddItemAction, DeleteItemAction } from './store/actions/shopping.actions';
+import { ShoppingState } from './store/reducers/shopping.reducers';
 
 
 
@@ -18,7 +19,7 @@ import { AddItemAction, DeleteItemAction } from './store/actions/shopping.action
 })
 export class AppComponent implements OnInit {
 
-  shoppingItems: Observable<Array<ShoppingItem>>;
+  shoppingItems: Observable<ShoppingState>;
   newShoppingItem: ShoppingItem = { id: '', name: '' };
 
 
