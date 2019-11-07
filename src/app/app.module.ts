@@ -8,6 +8,8 @@ import { AppComponent } from './app.component';
 import { ShoppingReducer } from './store/reducers/shopping.reducers';
 import { StoreDevtoolsModule } from '@ngrx/store-devtools';
 import { environment } from '../environments/environment';
+import { EffectsModule } from '@ngrx/effects';
+import { ShoppingEffects } from './store/effects/shopping.effects';
 
 @NgModule({
   declarations: [
@@ -20,7 +22,8 @@ import { environment } from '../environments/environment';
       shopping: ShoppingReducer
     }),
     StoreDevtoolsModule.instrument({ maxAge: 25, logOnly: environment.production }),
-    HttpClientModule
+    HttpClientModule,
+    EffectsModule.forRoot([ShoppingEffects])
   ],
   providers: [],
   bootstrap: [AppComponent]
